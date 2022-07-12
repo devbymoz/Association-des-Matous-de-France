@@ -1,0 +1,7 @@
+# Ignorer les médias
+ressources/
+
+# Ignorer Bootstrap & JS
+css/bootstrap.min.css
+js/
+
