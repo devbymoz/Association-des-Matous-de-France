@@ -1,0 +1,126 @@
+*, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: montserrat, Helvetica, sans-serif; }
+p { font-size: 18px;}
+.bottom-bar { border-bottom: 1px solid #C7C7C7; margin: 30px 0; width: 100%; }
+.bottom-bar-dashed { border-bottom: 1px dashed #C7C7C7; margin: 30px 0; width: 100%;}
+h2 { font-size: 1.3rem; color: #560BAD; margin-bottom: 10px;}
+a { text-decoration: none;}
+
+/* Bouton classique et bouton call to action */
+.m_btn {
+    background-color: #3A0CA3;
+    color: #FFF;
+    padding: 7px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    transform: scale(1);
+    transition-property: all;
+    transition-duration: 300ms;
+}
+.m_btn:hover { background: #F72585; transform: scale(1.03); color: #FFF;}
+.btn-cta { 
+    background-color: #F72585; 
+    text-transform: uppercase; 
+    padding: 11px 13px; 
+    font-weight: 700;
+}
+.btn-cta:hover { background: #3A0CA3; }
+
+
+
+/* DÉBUT DU HEADER */
+.second-header { padding: 7px 0; border-bottom: 1px solid #C7C7C7; font-size: 14px; }
+.link-donation { color: #F72585; font-weight: 600;}
+.main-header { padding: 16px 0; }
+
+/* Retire la bordure du menu hamburder */
+.navbar { text-transform: uppercase; font-weight: 700;}
+.navbar-toggler { border: none; padding: 0; }
+.navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus { outline: none; box-shadow: none;}
+
+/* Changement de style lorsque le menu est déroulé*/
+@media screen and (max-width: 991px){
+    .navbar-nav {
+        margin-top: 20px;
+        background: #F4F4F4;
+        padding: 10px 10px;
+        color: #FFF;
+        border-bottom: 5px solid #3a0da3;
+    }
+}
+/* FIN DU HEADER */
+
+/********************* PAGE D'ACCUEIL **********************/
+.background-home {
+    position: relative;
+    background-image: url('/ressources/img/home-background.jpg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    min-height: 240px;
+    padding: 20px;
+    z-index: 1;
+}
+.background-home::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: #000000;
+    opacity: .4;
+    z-index: -1;
+}
+.background-home h1 { color: #FFF; font-weight: 700; }
+.background-home p { color: #FFF; font-size: 16px; font-weight: 300; }
+.background-home > .m_btn { position: absolute; bottom: 20px; }
+@media screen and (min-width: 768px) {
+    .background-home { height: 350px; }
+}
+@media screen and (min-width: 992px) {
+    .background-home { height: 550px; }
+}
+
+/* Galerie des chats sur la page d'accueil */
+.container-our-cats{ display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+@media screen and (min-width: 1200px){
+    .container-our-cats{ grid-template-columns: repeat(4, 1fr) ; }
+}
+.a-cat { position: relative; }
+.a-cat img { width: 100%; height: 250px; object-fit: cover; }
+
+.name-cat {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    color: transparent;
+    font-size: 26px;
+    transition: color;
+}
+
+.a-cat > a:hover .name-cat {
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: all;
+    transition-duration: 300ms;
+}
+
+/* FOOTER */
+/* Masque les pointillés des barres */
+@media screen and (min-width: 992px) {
+    footer .bottom-bar-dashed { display: none; }  
+}
+
+.copyright { margin: 20px auto; text-align: center; font-size: 12px; }
+
+/********************* FIN PAGE D'ACCUEIL **********************/
