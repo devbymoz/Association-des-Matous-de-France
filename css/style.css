@@ -21,19 +21,15 @@ a { text-decoration: none;}
     transition-property: all;
 }
 .m_btn:hover { background: #F72585; transform: scale(1.03); color: #FFF; transition-duration: 300ms; }
-.btn-cta { 
-    background-color: #F72585; 
-    text-transform: uppercase; 
-    padding: 11px 13px; 
-    font-weight: 700;
-}
+.btn-cta { background-color: #F72585; text-transform: uppercase; padding: 11px 13px; font-weight: 700;}
 .btn-cta:hover { background: #3A0CA3; }
-
 
 
 /* DÉBUT DU HEADER */
 .second-header { padding: 7px 0; border-bottom: 1px solid #C7C7C7; font-size: 14px; }
 .link-donation { color: #F72585; font-weight: 600;}
+.link-donation::after { content: "\f4be";font-family: FontAwesome; margin-left: 5px; vertical-align: text-bottom;}
+
 .main-header { padding: 16px 0; }
 
 /* Retire la bordure du menu hamburder */
@@ -132,10 +128,8 @@ article img:hover { transform: scale(1.03); }
 
 .events h2 { font-size: 1.1rem; margin: 10px 0 0 5px; }
 .event-date { font-size: 0.8rem; margin-top: 10px; margin-left: 5px; }
+.event-date::before { content: "\f133"; font-family: FontAwesome; margin-right: 5px; }
 .events article{ margin-top: 20px; }
-
-.m_pagination a { color: #3A0CA3; }
-.active>.page-link { background-color: #3A0CA3; }
 /********************* FIN PAGE LISTE DES EVENEMENTS **********************/
 
 
@@ -143,12 +137,8 @@ article img:hover { transform: scale(1.03); }
 .breadcrumb a { color: #3a0da3; }
 .event img { object-fit: cover; }
 .event-information { border-top: 1px solid #C7C7C7; padding-top: 30px; }
-.event-information span {
-    font-size: 0.9rem;
-    font-style: italic;
-    display: block;
-    margin-bottom: 10px;
-}
+.event-information span { font-size: 0.9rem; font-style: italic; display: block; margin-bottom: 10px;}
+.event-information p::before { content: '\f3c5';font-family: FontAwesome; margin-right: 10px; vertical-align: text-bottom;}
 
 @media screen and (min-width: 992px) {
     .event {

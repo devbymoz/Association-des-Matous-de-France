@@ -1,7 +1,9 @@
 # Ignorer les médias
 ressources/
 
-# Ignorer Bootstrap & JS
+# Ignorer Bootstrap, JS & Font Awesome
 css/bootstrap.min.css
 js/
+css/all.min.css
+webfonts/
 
