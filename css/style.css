@@ -3,7 +3,7 @@ body { font-family: montserrat, Helvetica, sans-serif; }
 p { font-size: 18px;}
 .bottom-bar { border-bottom: 1px solid #C7C7C7; margin: 30px 0; width: 100%; }
 .bottom-bar-dashed { border-bottom: 1px dashed #C7C7C7; margin: 30px 0; width: 100%;}
-h1 { font-weight: 900; color: #F72585;}
+h1 { font-size: 2.2rem; font-weight: 900; color: #F72585;}
 h2 { font-size: 1.3rem; color: #560BAD; margin-bottom: 10px;}
 a { text-decoration: none;}
 
@@ -19,9 +19,8 @@ a { text-decoration: none;}
     border: none;
     transform: scale(1);
     transition-property: all;
-    transition-duration: 300ms;
 }
-.m_btn:hover { background: #F72585; transform: scale(1.03); color: #FFF;}
+.m_btn:hover { background: #F72585; transform: scale(1.03); color: #FFF; transition-duration: 300ms; }
 .btn-cta { 
     background-color: #F72585; 
     text-transform: uppercase; 
@@ -101,7 +100,7 @@ a { text-decoration: none;}
     transform: translate(-50%, -50%);
     color: transparent;
     font-size: 26px;
-    transition: color;
+    font-weight: 700;
 }
 
 .a-cat > a:hover .name-cat {
@@ -113,7 +112,7 @@ a { text-decoration: none;}
     width: 100%;
     height: 100%;
     transition: all;
-    transition-duration: 300ms;
+    transition-duration: 400ms;
 }
 
 /* FOOTER */
@@ -126,6 +125,7 @@ a { text-decoration: none;}
 
 /********************* FIN PAGE D'ACCUEIL **********************/
 
+
 /********************* DÉBUT PAGE LISTE DES EVENEMENTS **********************/
 article img { object-fit: cover; transform: scale(1); transition-duration: 600ms; }
 article img:hover { transform: scale(1.03); }
@@ -134,7 +134,46 @@ article img:hover { transform: scale(1.03); }
 .event-date { font-size: 0.8rem; margin-top: 10px; margin-left: 5px; }
 .events article{ margin-top: 20px; }
 
-
-
-
+.m_pagination a { color: #3A0CA3; }
+.active>.page-link { background-color: #3A0CA3; }
 /********************* FIN PAGE LISTE DES EVENEMENTS **********************/
+
+
+/********************* DÉBUT PAGE EVENEMENT UNIQUE **********************/
+.breadcrumb a { color: #3a0da3; }
+.event img { object-fit: cover; }
+.event-information { border-top: 1px solid #C7C7C7; padding-top: 30px; }
+.event-information span {
+    font-size: 0.9rem;
+    font-style: italic;
+    display: block;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 992px) {
+    .event {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 50px);
+    }
+    .event img {
+        grid-column: 1 / span 6;
+        grid-row: 1 / span 8;
+        height: 400px;
+    }
+    .title-date-event {
+        grid-column: 7 / span 6;
+        margin-left: 30px;
+    }
+    .event-information {
+        grid-column: 7 / span 6;
+        grid-row: 3 ;
+        margin-left: 30px;
+    }
+    .event-description {
+        grid-column: span 12;
+        grid-row: 9 / span 6;
+    } 
+}
+/********************* FIN PAGE EVENEMENT UNIQUE **********************/
+
