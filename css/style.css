@@ -1,5 +1,5 @@
 *, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: montserrat, Helvetica, sans-serif; }
+body { font-family: 'Montserrat', Helvetica, sans-serif; }
 p { font-size: 18px;}
 .bottom-bar { border-bottom: 1px solid #C7C7C7; margin: 30px 0; width: 100%; }
 .bottom-bar-dashed { border-bottom: 1px dashed #C7C7C7; margin: 30px 0; width: 100%;}
